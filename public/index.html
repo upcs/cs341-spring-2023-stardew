@@ -1,0 +1,73 @@
+<!--HW1 Harry VU-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Page Title</title>
+		<!--Links to the css file-->
+		<link rel="stylesheet" type="text/css" href="new-file.css">
+	</head>
+
+	<!--Some style changes to help match the example-->
+    <style>
+    	button{
+        	display: block;
+        }
+        .table3{
+        	margin-left: 30px;
+        }
+    </style>
+
+	<body class="body1">
+    	<h1>Cheesecake Order Form</h1>
+		<!--Where the cheesecake image is placed-->
+		<img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" width="200px" height="200px"></th> 
+		<table class="table1">
+            <tr>
+				<td>Quantity Topping</td>
+            </tr>
+		</table>
+
+        <table class="table2">
+        	<tr>
+				<!--For the option function that allows user to select the quantity of toppings-->
+				<th style="padding-right: 25px"><select id="toppings">
+  					<option value="0">0</option>
+  					<option value="1">1</option>
+  					<option value="2">2</option>
+  					<option value="3">3</option>
+				</select></th>
+				<!--For the radio selections-->
+                <td><div class="div1">
+                	<input type="radio" id="Plain" name="topping" value="Plain">
+					<label for="Plain">Plain</label><br>
+					<input type="radio" id="Cherry" name="topping" value="Cherry">
+					<label for="Cherry">Cherry</label><br>
+					<input type="radio" id="Chocolate" name="topping" value="Chocolate">
+					<label for="Chocolate">Chocolate</label>
+                </div></td>
+            </tr>
+        </table>
+
+		<!--Text box code-->
+        <label for="text">Notes:</label><br>
+		<textarea id="text" name="text" rows="4" cols="40">Enter any special instructions here.</textarea>
+        <p><button type="button">Order</button></p>
+
+		<!--For the final bottom area that stores the total orders last month info.-->
+		<div class="div2">
+        	<h2>Total Orders Last Month</h2>
+        	<table class="table3" CELLSPACING=0>
+        		<tr>
+        			<td>&bull; 11 cherry</td>
+        		<tr>
+            	<tr>
+        			<td>&bull; 17 chocolate</td>
+        		<tr>
+           	    <tr>
+        			<td>&bull; 31 plain</td>
+        		<tr>
+        	</table>
+		</div>
+	</body>
+</html>
