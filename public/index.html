@@ -1,73 +1,52 @@
-<!--HW1 Harry VU-->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
 
-	<head>
-		<title>Page Title</title>
-		<!--Links to the css file-->
-		<link rel="stylesheet" type="text/css" href="new-file.css">
-	</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>BackusAgrilabs website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+  </head>
+  <body> 
+    <!-- 
+      Top menu bar on the page
+    -->
+    <section class="navigation">
+        <nav class="nav-container">
+            <!-- insert image in this section 
+                        original logo - height: 126px, width: 361px -->
+            <div id="logo"><img src="https://static.wixstatic.com/media/1578a7_7f1af31510d64efbacd13926ccc248d7~mv2.png/v1/fill/w_361,h_126,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/BackusAgriLabs_Logo.png" alt="backusagrilabs logo" width="180.5" height="63" style="float:left">
+                </div>
+            <div class="nav-list">    
+                <li style="display:inline"><a href="#about" >HOME</a></li>
+                <li style="display:inline"><a href="#consulting" >FARM</a></li>
+                <li style="display:inline"><a href="#contact" >WATER</a></li>
+            </div>
+            <div id="profile-pic">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="buttonpng" height="50" weight="62.5" style="float:right">
+                
+            </div>
+        </nav>
+    </section>
 
-	<!--Some style changes to help match the example-->
-    <style>
-    	button{
-        	display: block;
-        }
-        .table3{
-        	margin-left: 30px;
-        }
-    </style>
 
-	<body class="body1">
-    	<h1>Cheesecake Order Form</h1>
-		<!--Where the cheesecake image is placed-->
-		<img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" width="200px" height="200px"></th> 
-		<table class="table1">
-            <tr>
-				<td>Quantity Topping</td>
-            </tr>
-		</table>
+    <section class="hero">
+      <h1 style="display: inline;"><span></span>Plant. Grow. Give.</h1>
+      <p>More Info</p>
+      <a href="#contact" class="w3-padding-large w3-round">Join Today</a>
+    </section>
 
-        <table class="table2">
-        	<tr>
-				<!--For the option function that allows user to select the quantity of toppings-->
-				<th style="padding-right: 25px"><select id="toppings">
-  					<option value="0">0</option>
-  					<option value="1">1</option>
-  					<option value="2">2</option>
-  					<option value="3">3</option>
-				</select></th>
-				<!--For the radio selections-->
-                <td><div class="div1">
-                	<input type="radio" id="Plain" name="topping" value="Plain">
-					<label for="Plain">Plain</label><br>
-					<input type="radio" id="Cherry" name="topping" value="Cherry">
-					<label for="Cherry">Cherry</label><br>
-					<input type="radio" id="Chocolate" name="topping" value="Chocolate">
-					<label for="Chocolate">Chocolate</label>
-                </div></td>
-            </tr>
-        </table>
 
-		<!--Text box code-->
-        <label for="text">Notes:</label><br>
-		<textarea id="text" name="text" rows="4" cols="40">Enter any special instructions here.</textarea>
-        <p><button type="button">Order</button></p>
+    
+  
 
-		<!--For the final bottom area that stores the total orders last month info.-->
-		<div class="div2">
-        	<h2>Total Orders Last Month</h2>
-        	<table class="table3" CELLSPACING=0>
-        		<tr>
-        			<td>&bull; 11 cherry</td>
-        		<tr>
-            	<tr>
-        			<td>&bull; 17 chocolate</td>
-        		<tr>
-           	    <tr>
-        			<td>&bull; 31 plain</td>
-        		<tr>
-        	</table>
-		</div>
-	</body>
+    <section class="footer">
+      <p class="w3-center logo">© 2023 - STARDEW - All rights reserved</p>
+    </section>
+
+  </body>
+
+  <script src="main.js"></script>
 </html>
