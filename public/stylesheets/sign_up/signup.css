@@ -1,30 +1,61 @@
+
 .sign-up-page-container {
   min-height: 100vh;
-  border-color: var(--dl-color-gray-black);
-  border-width: 1px;
 }
 .sign-up-page-sign-up-page {
-  width: 1440px;
-  height: 1024px;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  overflow: hidden;
+  overflow: scroll;
   position: relative;
   align-items: flex-start;
   flex-shrink: 0;
   border-color: transparent;
   background-color: rgba(96, 230, 133, 1);
 }
+.sign-up-page-container1 {
+  top: 0px;
+  left: 0px;
+  width: auto;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  max-width: auto;
+  align-items: flex-start;
+}
+.sign-up-page-container2 {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  max-width: auto;
+  align-items: flex-start;
+  justify-content: center;
+}
 .sign-up-page-rectangle1 {
   top: 0px;
   left: 0px;
-  width: 1440px;
-  height: 94px;
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  position: absolute;
+  background-size: cover;
+  background-image: url("./playground_assets/rectangle11192-msm.svg");
+  background-position: center;
+}
+.sign-up-page-vector {
+  top: 30px;
+  right: 21px;
+  width: 39px;
+  height: 42px;
   position: absolute;
 }
 .sign-up-page-text {
-  top: 32px;
-  left: 1269px;
+  top: 35px;
   color: rgba(0, 0, 0, 1);
+  right: 73px;
   width: 77px;
   height: auto;
   position: absolute;
@@ -41,37 +72,42 @@
   text-decoration: none;
 }
 .sign-up-page-image1 {
-  top: 8px;
-  left: 576px;
-  width: 289px;
-  height: 77px;
+  top: 13px;
+  left: 0px;
+  right: 0px;
+  width: auto;
+  height: auto;
+  margin: auto;
   position: absolute;
   border-color: transparent;
 }
-.sign-up-page-farm1widget {
-  top: 110px;
-  left: 23px;
-  width: 1396px;
-  height: 898px;
+.sign-up-page-container3 {
+  top: 133px;
+  left: 0px;
+  right: 0px;
+  width: 1139.3646240234375px;
+  height: 800px;
+  margin: auto;
+  display: flex;
   position: absolute;
-  border-color: transparent;
-  border-radius: 15px;
+  align-items: flex-start;
 }
-.sign-up-page-rectangle63 {
-  top: 322px;
-  left: 305px;
-  width: 813px;
-  height: 106px;
+.sign-up-page-farm-widget {
+  top: 0px;
+  left: 0px;
+  width: 1100px;
+  height: 800px;
   position: absolute;
   border-color: transparent;
   border-radius: 15px;
 }
 .sign-up-page-text02 {
-  top: 353px;
-  left: 360px;
+  top: 190px;
+  left: 230px;
   color: rgba(0, 0, 0, 1);
-  width: 142px;
-  height: auto;
+  width: 670px;
+  height: 100px;
+  margin: auto;
   position: absolute;
   font-size: 32px;
   align-self: auto;
@@ -84,22 +120,15 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
-}
-.sign-up-page-rectangle65 {
-  top: 456px;
-  left: 303px;
-  width: 813px;
-  height: 106px;
-  position: absolute;
-  border-color: transparent;
-  border-radius: 15px;
+  background-color: var(--dl-color-gray-900);
 }
 .sign-up-page-text04 {
-  top: 487px;
-  left: 345px;
+  top: 460px;
+  left: 230px;
   color: rgba(0, 0, 0, 1);
-  width: 258px;
-  height: auto;
+  width: 670px;
+  height: 100px;
+  margin: auto;
   position: absolute;
   font-size: 32px;
   align-self: auto;
@@ -112,98 +141,15 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
-}
-.sign-up-page-rectangle66 {
-  top: 593px;
-  left: 302px;
-  width: 813px;
-  height: 106px;
-  position: absolute;
-  border-color: transparent;
-  border-radius: 15px;
+  background-color: var(--dl-color-gray-900);
 }
 .sign-up-page-text06 {
-  top: 621px;
-  left: 345px;
-  color: rgba(0, 0, 0, 1);
-  width: 258px;
-  height: auto;
-  position: absolute;
-  font-size: 32px;
-  align-self: auto;
-  font-style: Regular;
-  text-align: left;
-  font-family: Open Sans;
-  font-weight: 400;
-  line-height: normal;
-  font-stretch: normal;
-  margin-right: 0;
-  margin-bottom: 0;
-  text-decoration: none;
-}
-.sign-up-page-frameiconuser {
-  top: 26px;
-  left: 1346px;
-  width: 39px;
-  height: 42px;
-  display: flex;
-  padding: 0;
-  position: absolute;
-  align-self: auto;
-  box-sizing: border-box;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-color: transparent;
-  border-style: none;
-  border-width: 0;
-  margin-right: 0;
-  border-radius: 0px 0px 0px 0px;
-  margin-bottom: 0;
-  flex-direction: row;
-  justify-content: flex-start;
-  background-color: transparent;
-}
-.sign-up-page-vector {
-  top: 0px;
-  left: 0px;
-  width: 39px;
-  height: 42px;
-  position: absolute;
-}
-.sign-up-page-rectangle62 {
-  top: 734px;
-  left: 576px;
-  width: 255px;
-  height: 56px;
-  position: absolute;
-  border-color: transparent;
-  border-radius: 20px;
-}
-.sign-up-page-text08 {
-  top: 734px;
-  left: 663px;
-  color: rgba(255, 255, 255, 1);
-  width: 92px;
-  height: auto;
-  position: absolute;
-  font-size: 25px;
-  align-self: auto;
-  font-style: Regular;
-  text-align: center;
-  font-family: Open Sans;
-  font-weight: 400;
-  line-height: normal;
-  font-stretch: normal;
-  margin-right: 0;
-  margin-bottom: 0;
-  text-decoration: none;
-}
-.sign-up-page-text10 {
-  top: 206px;
-  left: 358px;
+  top: 50px;
+  left: 230px;
   color: rgba(0, 0, 0, 1);
   width: 703px;
   height: auto;
+  margin: auto;
   position: absolute;
   font-size: 75px;
   align-self: auto;
@@ -217,17 +163,69 @@
   margin-bottom: 0;
   text-decoration: none;
 }
-.sign-up-page-icoutlineremoveredeye {
-  top: 478px;
-  left: 1005px;
+.sign-up-page-button {
+  top: 580px;
+  left: 450px;
+  color: white;
+  width: 200px;
+  height: 6vh;
+  position: absolute;
+  background-color: green;
+}
+
+.sign-up-page-button:hover{
+  background-color:rgb(101, 223, 45);
+}
+.sign-up-page-container4 {
+  top: 325px;
+  left: 230px;
+  width: 671.625px;
+  height: 100px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+}
+.sign-up-page-text08 {
+  top: 0px;
+  left: 0px;
+  color: rgba(0, 0, 0, 1);
+  width: 670px;
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Open Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  background-color: var(--dl-color-gray-900);
+}
+.sign-up-page-mdiinformationoutline {
+  top: 21px;
+  right: -65px;
   width: 56px;
   height: 56px;
   position: absolute;
 }
-.sign-up-page-mdiinformationoutline {
-  top: 478px;
-  left: 1135px;
+.sign-up-page-icoutlineremoveredeye {
+  top: 21px;
+  right: 17px;
   width: 56px;
   height: 56px;
   position: absolute;
+}
+@media(max-width: 991px) {
+  .sign-up-page-image1 {
+    display: none;
+  }
+}
+
+textarea {
+  resize: none;
 }
