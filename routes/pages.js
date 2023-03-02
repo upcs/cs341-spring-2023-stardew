@@ -13,4 +13,12 @@ router.get("/login", (req, res) => {
     res.render("login.hbs");
 });
 
+router.get("/forgot", (req, res) => {
+    res.render("forget.hbs");
+});
+
+router.get("/change", (req, res) => {
+    res.render("change.hbs");
+});
+
 module.exports = router;
