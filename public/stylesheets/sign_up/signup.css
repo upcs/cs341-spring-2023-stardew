@@ -213,12 +213,7 @@
   height: 56px;
   position: absolute;
 }
-
-::-ms-reveal {
-  display: none;
-}
-
-.eyeopen_icon {
+.sign-up-page-icoutlineremoveredeye {
   top: 21px;
   right: 17px;
   width: 56px;
