@@ -1,4 +1,38 @@
 
+.submit-button {
+  top: 350px;
+  left: 450px;
+  color: white;
+  width: 200px;
+  height: 6vh;
+  position: absolute;
+  background-color: green;
+}
+
+
+.forgot-password {
+  top: 440px;
+  left: 760px;
+  color: rgb(64, 168, 87);
+  position: absolute;
+}
+
+.signup-text {
+  top: 560px;
+  left: 400px;
+  position: absolute;
+}
+
+.signup-text span, .forgot-password {
+  color: rgb(64, 168, 87);
+  cursor: pointer;
+}
+
+.signup-text span:hover, .forgot-password:hover {
+  color: rgb(101, 223, 45);
+  text-decoration: underline;
+}
+
 .sign-up-page-container {
   min-height: 100vh;
 }
@@ -122,6 +156,26 @@
   text-decoration: none;
   background-color: var(--dl-color-gray-900);
 }
+
+.old-password-text {
+  color: rgba(0, 0, 0, 1);
+  width: 670px;
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Open Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  background-color: var(--dl-color-gray-900);
+}
 .sign-up-page-text04 {
   top: 460px;
   left: 230px;
@@ -143,7 +197,7 @@
   text-decoration: none;
   background-color: var(--dl-color-gray-900);
 }
-.sign-up-page-text06 {
+.sign-up-page-text06, .new-password-text {
   top: 50px;
   left: 230px;
   color: rgba(0, 0, 0, 1);
@@ -163,8 +217,8 @@
   margin-bottom: 0;
   text-decoration: none;
 }
-.sign-up-page-button {
-  top: 580px;
+.login-button, .done-button {
+  top: 490px;
   left: 450px;
   color: white;
   width: 200px;
@@ -173,9 +227,20 @@
   background-color: green;
 }
 
-.sign-up-page-button:hover{
+.login-button:hover, .submit-button:hover, .done-button:hover {
   background-color:rgb(101, 223, 45);
 }
+
+.old-password-container {
+  top: 190px;
+  left: 230px;
+  width: 670px;
+  height: 100px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+}
+
 .sign-up-page-container4 {
   top: 325px;
   left: 230px;
@@ -213,11 +278,6 @@
   height: 56px;
   position: absolute;
 }
-
-::-ms-reveal {
-  display: none;
-}
-
 .eyeopen_icon {
   top: 21px;
   right: 17px;
@@ -230,7 +290,9 @@
     display: none;
   }
 }
-
+::-ms-reveal {
+  display: none;
+}
 textarea {
   resize: none;
 }
