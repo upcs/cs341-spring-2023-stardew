@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    position: fixed;
+    background-color: white;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 10px;
+    background-color: rgb(85,219,112);
+}
+
+#change-pass-header{
+    font-size: 60px;
+    font-family: 'Open Sans';
+}
+
+.changepass-section{
+    margin-top: 85px;
+    margin-bottom: 20px;
+    width: 97vw;
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+}
+
+#change-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border: 1px lightgray;
+}
+
+input[type="text"], input[type="password"] {
+    font-size: 12px;
+    width: 30vw;
+    height: 70px;
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: lightgray;
+}
+
+#done-button{
+    margin-top: 2vh;
+    padding: 10px 50px;
+    border-radius: 15px;
+    border: 0px solid green;
+    background-color: rgb(95, 194, 95);
+    color: white;
+}
+
+#done-button:hover{
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
