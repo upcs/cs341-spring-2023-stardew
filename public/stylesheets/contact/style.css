@@ -21,7 +21,7 @@
 }
 
 * {box-sizing: border-box}
-body {font-family: 'futura-pt', sans-serif; margin:0}
+body {font-family: Verdana, sans-serif; margin:0}
 
 /* 
   Navigation Bar Section
@@ -58,12 +58,12 @@ body {font-family: 'futura-pt', sans-serif; margin:0}
 }
 
 #bottom-link-list {
-    position: absolute;
-    left: 50%;
-    bottom: 3px;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-    font-family: "futura-pt", sans-serif;
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  font-family: "futura-pt", sans-serif;
 }
 
 a:link {
@@ -77,6 +77,15 @@ a:hover {
 a, a:visited, a:hover, a:active {
   color: inherit;
 }
+
+/*
+#home-link {
+    /* background-color: rgb(25, 6, 240); *
+}
+
+#water-link {
+    /* background-color: aqua; *
+} */
 
 #farm-link {
     /* background-color: rgb(19, 234, 58); */
@@ -119,99 +128,65 @@ a, a:visited, a:hover, a:active {
 
 
 
-/*
-  Slideshow container with slogan
-*/
-
-.mySlides {
-  display: none;
-  max-height: 60vh;
-  width: 100%;
-  background: linear-gradient(0, #42a957f4, #42a957f4);
-}
-
-.slide-img{vertical-align: middle;
-  width: auto;
-  height: 60vh;
-  opacity: 0.5;  
-}
-
-/* Slideshow container */
-.slideshow-container {
-  max-height: 60vh;
-  width: 100vw;
-  position: relative;
-  margin: auto;
-  display: flex;
-}
-
-.img::before {
-  background-color: #42a957;
-  opacity: 0.5;
-}
-
-/* Caption text */
-.slogan {
-  
-  color: #ffffff;
-  font-size: 10vh;
-  padding: 8px 12px;
-  top: 10vh;
-  left: 4vw;
-  width: 100vw;
-  height: 60vh;
-  text-align: left;
-  position: absolute;
-  font-weight: 1000;
-  font-family: "futura-pt", sans-serif;
-}
 
 
 
 /*
-  Mission statement section of the website
+  Support section
 */
-.mission {
-  background-color: #ffffff;
-  height: 60vh;
-  width: 90vw;
-  margin:0 auto;
-  width: 50%;
+.support {
+    background-color: var(--backus-darkgreen);
+    margin: 0 auto;
+    width: 100%;
+    min-height: 80vh;
+    height: auto;
+    
 }
 
-.mission-statement {
-  max-width: 90vw;
-  text-align: center;
-  color: var(--backus-darkgreen);
-  position: relative;
-  top: 10vh;
-  font-size: var(--font-x-large);
-  font-family: "futura-pt", sans-serif;
+.support-head {
+    width: 40vw;
+    text-align: center;
+    left: 8vw;
+    color: #ffffff;
+    position: relative;
+    top: 10vh;
+    font-size: var(--font-x-large);
+    font-family: "futura-pt", sans-serif;
+    display: inline-block;
+}
+
+.form-container {
+    width: 30vw;
+    text-align: left;
+    float: right;
+    right: 13vw;
+    color: #ffffff;
+    position: relative;
+    top: 15vh;
+    display: inline-block;
+    font-size: var(--font-x-large);
+    font-family: "futura-pt", sans-serif;
 }
 
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+.feedback {
+    width: 100%;
+    height: 10vh;
+    resize: none;
 }
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-
-
-
-
-
-
-
 
 
 
