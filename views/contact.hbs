@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>BackusAgrilabs website</title>
+  <link rel="stylesheet" href="stylesheets/contact/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+</head>
+
+<body>
+  <!--  Top menu/navigatior bar on the page. This menu contains the logo, tab links, and a login icon. -->
+  <section class="navigation">
+    <div class="nav-container">
+      <!-- insert image in this section 
+          original logo - height: 126px, width: 361px -->
+      <div id="logo">
+        <img id="logo-pic"
+          src="res/backus_agrilabs_logo.png"
+          alt="backusagrilabs logo">
+      </div>
+      <div id="nav-list">
+        <div id="bottom-link-list">
+          <li id="home-link" style="display: inline-block;"><a href="/">HOME</a></li>
+          <li id="farm-link" style="display: inline-block;"><a href="/produce">PRODUCE</a></li>
+          <li id="water-link" style="display: inline-block;"><a href="/contact">CONTACT US</a></li>
+        </div>
+      </div>
+      <div id="profile-log">
+        <div id="bottom-log">
+          <a href="/login">LOG IN</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section>
+    <div class="support">
+      <div class="support-head">
+        <b>Contact Us</b><br><br>We encourage all inquiries and feedback. We are constantly looking to bring in community voices to influence our research and development. Let us know if there is anything you wish you had to help solve food shortages.
+        <br><br>Fill out the form, and we will get back to as soon as we can! Or email us at info@backusagrilabs.com.
+      </div>
+      <div class="form-container">
+        <form> <!-- action="/auth/login" method="POST" -->
+          <label for="fname">First Name</label>
+          <input type="text" class="form-control" id="fname" name="firstname" placeholder="First Name">
+          <label for="lname">Last Name</label>
+          <input type="text" class="form-control" id="lname" name="lastname" placeholder="Last Name">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+
+          <label for="feedback">Message</label><br>
+          <textarea type="text" class="feedback" id="feedback" name="feedback"></textarea>
+
+          <div id="error-feedback-message"></div>
+
+          <button type="submit" id="send-feedback">Send</button>
+      </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer">
+    <p>© 2023 - Backus AgriLabs - All rights reserved</p>
+  </section>
+
+</body>
+
+</html>
