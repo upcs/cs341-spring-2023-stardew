@@ -11,6 +11,13 @@ const db = mysql.createConnection({
     database: 'nodejs-login'
 });
 
+const plantdb = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'plantdb'
+})
+
 const publicDirectory = path.join(__dirname, './public')
 app.use(express.static(publicDirectory));
 
@@ -20,6 +27,15 @@ app.use(express.json());
 app.set('view engine', 'hbs');
 
 db.connect( (error) =>{
+    if(error) {
+        console.log(error)
+    }
+    else{
+        console.log("MySQL is in")
+    }
+})
+
+plantdb.connect( (error) =>{
     if(error) {
         console.log(error)
     }
