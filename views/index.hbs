@@ -22,8 +22,14 @@
       <div id="nav-list">
         <div id="bottom-link-list">
           <li id="home-link" style="display: inline-block;"><a href="/">HOME</a></li>
-          <li id="farm-link" style="display: inline-block;"><a href="/produce">PRODUCE</a></li>
-          <li id="water-link" style="display: inline-block;"><a href="/contact">CONTACT US</a></li>
+          {{#if user }}
+            <li id="farm-link" style="display: inline-block;"><a href="/profile">Profile</a></li>
+            <li id="water-link" style="display: inline-block;"><a href="/auth/logout">Logout</a></li>
+          {{else}}
+            <li id="farm-link" style="display: inline-block;"><a href="/produce">PRODUCE</a></li>
+            <li id="water-link" style="display: inline-block;"><a href="/contact">CONTACT US</a></li>
+          {{/if}}
+
         </div>
       </div>
       <div id="profile-log">
