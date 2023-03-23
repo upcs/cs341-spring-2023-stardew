@@ -12,8 +12,35 @@ nav{
     width: 100vw;
     height: 80px;
     position: fixed;
+    box-sizing: border-box;
     background-color: white;
-    z-index: 3;
+    z-index: 20;
+}
+
+.plant-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 4vw;
+    border: 1px solid orange;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+#backButton{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: green;
+    border:rgb(96, 230, 133);
+}
+#backButton:hover{
+    background-color: greenyellow;
 }
 
 @media screen and (min-width:850px){
@@ -39,9 +66,8 @@ nav{
         display: flex;
         flex-direction: column;
         background-color: #ffffff;
-        padding-bottom: 100px;
         border-radius: 15px;
-        border: 1px solid rgb(126, 88, 216);
+        border: 1px solid rgb(216, 103, 88);
     }
     .grid-header-section{
         display: flex;
@@ -55,6 +81,11 @@ nav{
         padding: 15px;
         border: 1px solid green;
     }
+
+    #info{
+        display:flex;
+        flex-direction: column;
+    }
     
     #farm-selection-div{
         background-color: rgb(217, 217, 217);
@@ -62,7 +93,6 @@ nav{
         padding: 0;
         max-height: 250px;
         overflow: auto;
-        margin-bottom: 20px;
         margin-left: 1%;
         display:none;
         position: absolute;
@@ -90,45 +120,58 @@ nav{
     .grid-display-section{
         display: flex;
         flex-direction: row;
+        overflow: auto;
+        border: 1px solid purple;
+        height: 70vh;
     }
-    .grid-section-one{
+
+    .grid-section-one, .grid-section-two, .grid-section-three, .grid-section-four{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(8, 1fr);
         grid-gap: 0;
         width: 20vw;
-        height: 70vh;
+        height: 100vh;
         border: 1px solid red;
     }
-    .grid-section-two{
+    .popup{
+        display:none;
+        width: 65vw; /*original width 95vw*/
+        height: 85vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        border-radius: 15px;
+        border: 1px solid rgb(216, 103, 88);
+        background-color: blue;
+        z-index: 10;
+    }
+    .pod-section{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         grid-gap: 0;
-        width: 20vw;
-        height: 70vh;
+        width: 95%;
+        height: 45%;
         border: 1px solid red;
     }
-    .grid-section-three{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(8, 1fr);
-        grid-gap: 0;
-        width: 20vw;
-        height: 70vh;
-        border: 1px solid red;
+    .pod-section .pod-item{
+        display: flex;
+        border-radius: 100%;
+        align-items: center;
+        justify-content: center;
     }
-    
-    .grid-item{
+    .grid-item, .pod-item{
         text-align: center;
         margin: 0;
         padding: 0;
         border: 2px solid black;
-        background-color: rgb(214, 150, 150);
+        background-color: rgb(175, 88, 88);
         text-align: center;
         cursor: pointer;
     }
-    .grid-item:hover{
+    .grid-item:hover, .pod-item:hover{
         background-color: rgb(216, 255, 222);
     }
       
@@ -144,13 +187,12 @@ nav{
     
     #information-section {
         width: 30vw;
-        height: 85vh;
+        height: 65vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: #ffffff;
-        padding-bottom: 100px;
         border-radius: 15px;
         border: 1px solid rgb(126, 88, 216);
     }
@@ -182,11 +224,11 @@ nav{
     body {
         display: flex;
         flex-direction: column; /*original flex-direction: column*/
-        justify-content: center;
         align-items: center;
         height: 100vh;
+        margin-top: 80px;
         background-color: rgb(96, 230, 133);
-        margin-top: 280px;
+
     }
     h1{
         font-size: 75px;
@@ -260,11 +302,12 @@ nav{
         display: flex;
         flex-direction: row;
         overflow: auto;
-        border: 1px solid green;
+        border: 1px solid purple;
     }
-    .grid-section-one{
+
+    .grid-section-one, .grid-section-two, .grid-section-three, .grid-section-four{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(8, 1fr);
         grid-gap: 0;
         width: 100vw;
@@ -273,34 +316,44 @@ nav{
         position: relative;
         z-index: 1;
     }
-    .grid-section-two{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(8, 1fr);
-        grid-gap: 0;
-        width: 100vw;
+    .popup{
+        display:none;
+        width: 95vw; /*original width 95vw*/
         height: 100vh;
-        border: 1px solid red;
-        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        border-radius: 15px;
+        border: 1px solid rgb(216, 103, 88);
+        background-color: blue;
+        z-index: 10;
     }
-    .grid-section-three{
+    .pod-section{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         grid-gap: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 95%;
+        height: 45%;
         border: 1px solid red;
-        z-index: 1;
     }
-    
-    .grid-item{
+    .pod-section .pod-item{
+        display: flex;
+        border-radius: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .grid-item, .pod-item{
         text-align: center;
         margin: 0;
         padding: 0;
         border: 2px solid black;
+        background-color: rgb(175, 88, 88);
+        text-align: center;
+        cursor: pointer;
     }
-    .grid-item:hover{
+    .grid-item:hover, .pod-item:hover{
         background-color: rgb(216, 255, 222);
     }
     
@@ -308,11 +361,11 @@ nav{
         background-color: rgb(175, 88, 88);
         text-align: center;
         cursor: pointer;
-      }
-      
-      .clicked {
+    }
+
+    .clicked {
         background-color: green;
-      }
+    }
     
     #display-value {
         font-size: 2rem;
@@ -355,5 +408,19 @@ nav{
         font-size: 15px;
         color: red;
     }
+
+
+    #water-section {
+        width: 95vw;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 15px;
+        border: 1px solid rgb(126, 88, 216);
+    }
     
 }
+
