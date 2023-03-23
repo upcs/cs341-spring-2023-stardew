@@ -24,7 +24,7 @@ exports.login = async (req, res) => {
       console.log(results);
       if( !results || !results[0] || !(await bcrypt.compare(password, results[0].password)) ) {
         res.status(401).render('login', {
-          message: 'Email or Password is incorrect'
+          message: 'Email or Password is wrong, please try again.'
         })
       } else {
         const id = results[0].id;
@@ -43,7 +43,7 @@ exports.login = async (req, res) => {
         }
 
         res.cookie('jwt', token, cookieOptions );
-        res.status(200).redirect("/");
+        res.status(200).redirect("/profile");
       }
 
     })
@@ -86,4 +86,47 @@ exports.signup = (req, res) => {
 
   });
 
+}
+
+exports.isLoggedIn = async (req, res, next) => {
+  // console.log(req.cookies);
+  if( req.cookies.jwt) {
+    try {
+      //1) verify the token
+      const decoded = await promisify(jwt.verify)(req.cookies.jwt,
+      process.env.JWT_SECRET
+      );
+
+      console.log(decoded);
+
+      //2) Check if the user still exists
+      db.query('SELECT * FROM users WHERE id = ?', [decoded.id], (error, result) => {
+        console.log(result);
+
+        if(!result) {
+          return next();
+        }
+
+        req.user = result[0];
+        console.log("user is")
+        console.log(req.user);
+        return next();
+
+      });
+    } catch (error) {
+      console.log(error);
+      return next();
+    }
+  } else {
+    next();
+  }
+}
+
+exports.logout = async (req, res) => {
+  res.cookie('jwt', 'logout', {
+    expires: new Date(Date.now() + 2*1000),
+    httpOnly: true
+  });
+
+  res.status(200).redirect('/');
 }
