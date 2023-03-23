@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./farm.css">
+    <title>Farm Page</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <!--Font Awesome Icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Backus Agrilabs</a></li>
+            <li><a href="#farm">Farm</a></li>
+            <li><a href="#login">Login</a></li>
+        </ul>
+    </nav>
+
+    <div id="popup-1" class="popup">
+        <div class="pod-section">
+            <div class="pod-item">1</div>
+            <div class="pod-item">2</div>
+            <div class="pod-item">3</div>
+            <div class="pod-item">4</div>
+            <div class="pod-item">5</div>
+            <div class="pod-item">6</div>
+            <div class="pod-item">7</div>
+            <div class="pod-item">8</div>
+        </div>
+        <button id="backButton" class="back-to-grid-button">Back</button>
+    </div>
+
+    <div id="gridSection" class="grid-section">
+        <div class="grid-header-section">
+            <button id="farm-button"><i class="fas fa-bars menu-icon"></i></button>
+            <div class="row">
+                <div id="farm-selection-div">
+                    <ul>
+                        <li><a id="Farm 1" value="1">Farm 1</a></li>
+                        <li><a id="Farm 2" value="2">Farm 2</a></li>
+                        <li><a id="Farm 3" value="3">Farm 3</a></li>
+                        <li><a id="Farm 4" value="4">Farm 4</a></li>
+                        <li><a id="Farm 5" value="5">Farm 5</a></li>
+                        <li><a id="Farm 6" value="6">Farm 6</a></li>
+                    </ul>
+                    <div id="modify-farm-selection-div">
+                        <button id="add-farm">Add</button>
+                        <button id="delete-farm">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <h2>Farm 1</h2>
+        </div>
+        <div class="grid-display-section">
+            <div class="grid-section-one">
+                <div class="grid-item">1A</div>
+                <div class="grid-item">2A</div>
+                <div class="grid-item">3A</div>
+                <div class="grid-item">4A</div>
+                <div class="grid-item">5A</div>
+                <div class="grid-item">6A</div>
+                <div class="grid-item">7A</div>
+                <div class="grid-item">8A</div>
+            </div>
+
+            <div class="grid-section-two">
+                <div class="grid-item">1B</div>
+                <div class="grid-item">2B</div>
+                <div class="grid-item">3B</div>
+                <div class="grid-item">4B</div>
+                <div class="grid-item">5B</div>
+                <div class="grid-item">6B</div>
+                <div class="grid-item">7B</div>
+                <div class="grid-item">8B</div>
+            </div>
+
+            <div class="grid-section-three">
+                <div class="grid-item">1C</div>
+                <div class="grid-item">2C</div>
+                <div class="grid-item">3C</div>
+                <div class="grid-item">4C</div>
+                <div class="grid-item">5C</div>
+                <div class="grid-item">6C</div>
+                <div class="grid-item">7C</div>
+                <div class="grid-item">8C</div>
+            </div>
+
+            <div class="grid-section-four">
+                <div class="grid-item">1D</div>
+                <div class="grid-item">2D</div>
+                <div class="grid-item">3D</div>
+                <div class="grid-item">4D</div>
+                <div class="grid-item">5D</div>
+                <div class="grid-item">6D</div>
+                <div class="grid-item">7D</div>
+                <div class="grid-item">8D</div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div id="info">
+        <div id="information-section">
+            <h2>Dashboard</h2>
+            <p>Plant Section</p>
+            <p id="display-value"></p>
+            <div id="name-error-message"></div>
+                <p id="date-plant"></p>
+                <div class="plant-info">
+                    <p>Date Planted</p>
+                    <input type="date" id="date-planted" placeholder="mm/dd/yyyy" readonly></input>
+            </div>
+            <div class="plant-info">
+                <p>Date Transfered</p>
+                <input type="date" id="date-transfered" placeholder="mm/dd/yyyy" readonly></input>
+            </div>
+            <div class="plant-info">
+                <p>Date Harvested</p>
+                <input type="date" id="date-harvested" placeholder="mm/dd/yyyy" readonly></input>
+            </div>
+            <div class="plant-info">
+                <p>Height</p>
+                <input type="number" id="plant-height" placeholder="__ cm" min="0" max="100" step=".01" readonly></input>
+            </div>
+            <div class="plant-info">
+                <p>Plant Data Watered</p>
+                <input type="date" id="date-watered" placeholder="mm/dd/yyyy" readonly></input>
+            </div>
+            <button id="edit-button">Edit</button>
+            <button id="save-button">Save Changes</button>
+        </div>
+
+
+        <div id="water-section">
+            <h2>Water Section</h2>
+            <div class="plant-info">
+                <p>Water Temperature</p>
+                <input type="number" id="water-temperature" placeholder="__°C" min="0" max="100" step=".01"></input>
+            </div>
+            <div class="plant-info">
+                <p>Farm Humidity</p>
+                <input type="number" id="farm-humidity" placeholder="__ %" min="0" max="100" step=".01"></input>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+
+
+<script src="farm.js"></script>
+</html>
+
+
+
+
+
+
+
+
