@@ -1,5 +1,5 @@
 // Import the necessary modules and the function to be tested
-const forgot = require('./forgot');
+const forgot = require('../public/forgot');
 
 // Define the test suite
 describe('Forgot password functionality', () => {

@@ -1,5 +1,5 @@
 // Import the necessary modules
-const router = require('./login_router');
+const router = require('../controllers/auth');
 
 // Define the test suite
 describe('Login route', () => {

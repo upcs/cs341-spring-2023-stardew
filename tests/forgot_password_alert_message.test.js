@@ -1,10 +1,8 @@
 // Import the necessary modules and the function to be tested
-const forgot = require('./forgot');
+const forgot = require('../public/forgot');
 
 // Define the test suite
-describe('Forgot password functionality', () => {
-
-  it('should show an alert message when an invalid email is submitted', () => {
+test('should show an alert message when an invalid email is submitted', () => {
     // Set up the necessary elements
     document.body.innerHTML = `
     <div id="email-button-section">
@@ -26,5 +24,4 @@ describe('Forgot password functionality', () => {
     expect(mockAlert).toHaveBeenCalledWith("invalid email. Try again");
     expect($("#email")).not.toHaveStyle("display: none");
     expect($("#submit-button")).not.toHaveStyle("display: none");
-  });
 });

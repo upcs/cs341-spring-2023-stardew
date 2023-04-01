@@ -1,10 +1,8 @@
 // Import the necessary modules and the function to be tested
-const login = require('./login');
+const login = require('../controllers/auth');
 
 // Define the test suite
-describe('Login functionality', () => {
-  // Define the test case
-  it('should display an error message if the email and/or password is incorrect', () => {
+test('Testing for error message appears for incorrect email or password', () => {
     // Set up the necessary DOM elements
     document.body.innerHTML = `
       <form>
@@ -15,10 +13,10 @@ describe('Login functionality', () => {
       </form>
     `;
 
+    const $ = require('jquery');
     // Call the click handler function
-    $("#sign-in-button").click();
+    $("#sign-in-button").on();
 
     // Assert that the error message is displayed
-    expect($("#error-feedback-message")).toHaveTextContent("Email and/or password is incorrect, please try again.");
-  });
+    expect($("#error-feedback-message").text()).toBe("Email and/or password is incorrect, please try again.");
 });
