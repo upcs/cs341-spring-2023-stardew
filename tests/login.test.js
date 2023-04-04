@@ -1,24 +1,31 @@
-// Import the necessary modules and the function to be tested
-const login = require('./login');
+const { login } = require('../controllers/auth');
 
-// Define the test suite
-describe('Login functionality', () => {
-  // Define the test case
-  it('should display an error message if the email and/or password is incorrect', () => {
-    // Set up the necessary DOM elements
-    document.body.innerHTML = `
-      <form>
-        <input type="email" id="email" value="incorrect-email" />
-        <input type="password" id="password" value="incorrect-password" />
-        <button type="button" id="sign-in-button">Sign In</button>
-        <div id="error-feedback-message"></div>
-      </form>
-    `;
+describe('login', () => {
+  let req, res;
 
-    // Call the click handler function
-    $("#sign-in-button").click();
+  beforeEach(() => {
+    req = {
+      body: {
+        email: 'test@test.com',
+        password: 'testpassword',
+      },
+    };
+    res = {
+      status: jest.fn().mockReturnThis(),
+      render: jest.fn(),
+      redirect: jest.fn(),
+    };
+  });
 
-    // Assert that the error message is displayed
-    expect($("#error-feedback-message")).toHaveTextContent("Email and/or password is incorrect, please try again.");
+  it('should return 400 if email or password is missing', async () => {
+    req.body.email = '';
+    req.body.password = '';
+
+    await login(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(400);
+    expect(res.render).toHaveBeenCalledWith('login', {
+      message: 'Need email and pass inputed',
+    });
   });
 });
