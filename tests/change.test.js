@@ -1,26 +1,29 @@
-// Import the necessary modules and the function to be tested
-const change = require('./change');
+const replace = require('../public/change');
 
-// Define the test suite
-describe('Change password functionality', () => {
-  // Define the test case
-  it('should replace the change password page with a confirmation message when the "done" button is clicked', () => {
-    // Set up the necessary elements
+describe('replace', () => {
+  test('updates header text and hides section on button click', () => {
+    // Create the HTML elements needed for the test
     document.body.innerHTML = `
-      <div id="change-pass-header">Change Password</div>
-      <div id="changepass-section">
-        <form>
-          <input type="password" id="new-pass" value="new-password" />
-          <button type="button" id="done-button">Done</button>
-        </form>
+      <div>
+        <button id="done-button">Done</button>
+        <h1 id="change-pass-header">Change Password</h1>
+        <section id="changepass-section">...</section>
       </div>
     `;
-
+    
     // Call the replace function
-    login.replace();
-
-    // Assert that the confirmation message is displayed and the change password section is hidden
-    expect($("#change-pass-header")).toHaveTextContent("Your Password has been changed");
-    expect($("#changepass-section")).toHaveStyle("display: none");
+    replace();
+    
+    // Simulate a button click
+    const button = document.getElementById('done-button');
+    button.click();
+    
+    // Check that the header text has been updated
+    const header = document.getElementById('change-pass-header');
+    expect(header.textContent).toBe('Your Password has been changed');
+    
+    // Check that the section is hidden
+    const section = document.getElementById('changepass-section');
+    expect(section.style.display).toBe('none');
   });
 });
