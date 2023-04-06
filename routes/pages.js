@@ -30,6 +30,10 @@ router.get("/change", (req, res) => {
     res.render("change.hbs");
 });
 
+router.get("/farm", (req, res) => {
+  res.render("farm.hbs");
+});
+
 router.get('/profile', authController.isLoggedIn, (req, res) => {
     console.log(req.user);
     if( req.user ) {
