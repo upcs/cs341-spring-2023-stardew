@@ -132,45 +132,74 @@ a, a:visited, a:hover, a:active {
 
 
 /*
-  Support section
+  Support Header
 */
 .support {
     background-color: var(--backus-darkgreen);
     margin: 0 auto;
     width: 100%;
-    min-height: 80vh;
+    min-height: 60vh;
     height: auto;
-    
 }
 
 .support-head {
-    width: 40vw;
-    text-align: center;
-    left: 8vw;
+    max-width: 50vw;
+    text-align: left;
+    margin-left: 4vw;
+    color: #ffffff;
+    position: relative;
+    top: 10vh;
+    font-size: 10vh;
+    font-family: "futura-pt", sans-serif;
+}
+
+.contact-message{
+    max-width: 60vw;
+    text-align: left;
+    margin-left: 4vw;
     color: #ffffff;
     position: relative;
     top: 10vh;
     font-size: var(--font-x-large);
     font-family: "futura-pt", sans-serif;
-    display: inline-block;
 }
 
+
+
+/*
+  Support body
+*/
+.support-body {
+    background-color: #ffffff;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 80vh;
+    height: auto;
+}
+
+.contact-instruction{
+    background-color: #ffffff;
+    color: var(--backus-darkgreen);
+    max-width: 50vw;
+    height: 40vh;
+    float: left;
+    padding: 4vw;
+    font-size: 4vh;
+    font-family: "futura-pt", sans-serif;
+    margin-top: 20vh;
+}
 .form-container {
-    width: 30vw;
+    float: left;
+    width: 50vw;
+    height: 70vh;
     text-align: left;
-    float: right;
-    right: 13vw;
-    color: #ffffff;
-    position: relative;
-    top: 15vh;
-    display: inline-block;
+    color: var(--backus-darkgreen);
+    background-color: rgb(255, 255, 255);
     font-size: var(--font-x-large);
     font-family: "futura-pt", sans-serif;
+    padding: 4vw;
+    margin-top: 10vh;
 }
-
-
-
-
 
 input[type=text], select {
     width: 100%;
@@ -201,5 +230,6 @@ input[type=text], select {
     align-items: center;
     justify-content: center;
     color: white;
+    min-width: 100%;
     font-family: "futura-pt", sans-serif;
 }
