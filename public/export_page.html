@@ -1,10 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
+    <script src="javascripts/export/showDropdown.js"></script>
+    <script src="javascripts/export/downloadToExcel.js"></script>
+    <script src="javascripts/export/table2excel.js"></script>
 
     <style data-tag="reset-style-sheet">
       html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
@@ -57,345 +60,138 @@
               src="stylesheets/export/public/playground_assets/farm1widget1193-ml3-800h.png"
               class="sign-up-page-farm-widget"
             />
-            <div id="table">
-              <div class="sign-up-page-frame6">
-                <div class="sign-up-page-frame1">
-                  <span class="sign-up-page-text"><span>ID</span></span>
-                </div>
-                <div class="sign-up-page-frame2">
-                  <span class="sign-up-page-text02"><span>Name</span></span>
-                </div>
-                <div class="sign-up-page-frame3">
-                  <span class="sign-up-page-text04"><span>Height</span></span>
-                </div>
-                <div class="sign-up-page-frame4">
-                  <span class="sign-up-page-text06">
-                    <span>Date Harvested</span>
-                  </span>
-                </div>
-                <div class="sign-up-page-frame5">
-                  <span class="sign-up-page-text08">
-                    <span>Date Transferred</span>
-                  </span>
-                </div>
-              </div>
-              <div class="sign-up-page-frame7">
-                <div><span class="sign-up-page-text10">1</span></div>
-                <div class="sign-up-page-frame21">
-                  <span class="sign-up-page-text11"><span>Beans</span></span>
-                </div>
-                <div class="sign-up-page-frame31">
-                  <span class="sign-up-page-text13"><span>3.5</span></span>
-                </div>
-                <div class="sign-up-page-frame41">
-                  <span class="sign-up-page-text15"><span>01/01/23</span></span>
-                </div>
-                <div class="sign-up-page-frame51">
-                  <span class="sign-up-page-text17"><span>03/23/23</span></span>
-                </div>
-              </div>
-              <div class="sign-up-page-frame8">
-                <div><span class="sign-up-page-text19">2</span></div>
-                <div class="sign-up-page-frame22">
-                  <span class="sign-up-page-text20">
-                    <span>Big Beans</span>
-                  </span>
-                </div>
-                <div class="sign-up-page-frame32">
-                  <span class="sign-up-page-text22"><span>3.5</span></span>
-                </div>
-                <div class="sign-up-page-frame42">
-                  <span class="sign-up-page-text24"><span>01/01/23</span></span>
-                </div>
-                <div class="sign-up-page-frame52">
-                  <span class="sign-up-page-text26"><span>03/23/23</span></span>
-                </div>
-              </div>
-              <div class="sign-up-page-frame9">
-                <div><span class="sign-up-page-text28">3</span></div>
-                <div class="sign-up-page-frame23">
-                  <span class="sign-up-page-text29">
-                    <span>Small Beans</span>
-                  </span>
-                </div>
-                <div class="sign-up-page-frame33">
-                  <span class="sign-up-page-text31"><span>3.5</span></span>
-                </div>
-                <div class="sign-up-page-frame43">
-                  <span class="sign-up-page-text33"><span>01/01/23</span></span>
-                </div>
-                <div class="sign-up-page-frame53">
-                  <span class="sign-up-page-text35"><span>03/23/23</span></span>
-                </div>
-              </div>
-              <div class="sign-up-page-frame10">
-                <div><span class="sign-up-page-text37">4</span></div>
-                <div class="sign-up-page-frame24">
-                  <span class="sign-up-page-text38"><span>Tomato</span></span>
-                </div>
-                <div class="sign-up-page-frame34">
-                  <span class="sign-up-page-text40"><span>3.5</span></span>
-                </div>
-                <div class="sign-up-page-frame44">
-                  <span class="sign-up-page-text42"><span>01/01/23</span></span>
-                </div>
-                <div class="sign-up-page-frame54">
-                  <span class="sign-up-page-text44"><span>03/23/23</span></span>
-                </div>
-              </div>
-              <div class="sign-up-page-frame11">
-                <div class="sign-up-page-frame15">
-                  <span class="sign-up-page-text46">5</span>
-                </div>
-                <div class="sign-up-page-frame25">
-                  <span class="sign-up-page-text47">
-                    <span>More Beans</span>
-                  </span>
-                </div>
-                <div class="sign-up-page-frame35">
-                  <span class="sign-up-page-text49"><span>3.5</span></span>
-                </div>
-                <div class="sign-up-page-frame45">
-                  <span class="sign-up-page-text51"><span>01/01/23</span></span>
-                </div>
-                <div class="sign-up-page-frame55">
-                  <span class="sign-up-page-text53"><span>03/23/23</span></span>
-                </div>
-              </div>
-              <div class="sign-up-page-frame12">
-                <div class="sign-up-page-frame16">
-                  <span class="sign-up-page-text55">6</span>
-                </div>
-                <div class="sign-up-page-frame26">
-                  <span class="sign-up-page-text56"><span>Banana</span></span>
-                </div>
-                <div class="sign-up-page-frame36">
-                  <span class="sign-up-page-text58"><span>3.5</span></span>
-                </div>
-                <div class="sign-up-page-frame46">
-                  <span class="sign-up-page-text60"><span>01/01/23</span></span>
-                </div>
-                <div class="sign-up-page-frame56">
-                  <span class="sign-up-page-text62"><span>03/23/23</span></span>
-                </div>
-              </div>
-              <div class="sign-up-page-frame13">
-                <div class="sign-up-page-frame17">
-                  <span class="sign-up-page-text64">7</span>
-                </div>
-                <div class="sign-up-page-frame27">
-                  <span class="sign-up-page-text65"><span>Apple</span></span>
-                </div>
-                <div class="sign-up-page-frame37">
-                  <span class="sign-up-page-text67"><span>3.5</span></span>
-                </div>
-                <div class="sign-up-page-frame47">
-                  <span class="sign-up-page-text69"><span>01/01/23</span></span>
-                </div>
-                <div class="sign-up-page-frame57">
-                  <span class="sign-up-page-text71"><span>03/23/23</span></span>
-                </div>
-              </div>
-              <div class="sign-up-page-frame14">
-                <div class="sign-up-page-frame18">
-                  <span class="sign-up-page-text73">8</span>
-                </div>
-                <div class="sign-up-page-frame28">
-                  <span class="sign-up-page-text74"><span>Orange</span></span>
-                </div>
-                <div class="sign-up-page-frame38">
-                  <span class="sign-up-page-text76"><span>3.5</span></span>
-                </div>
-                <div class="sign-up-page-frame48">
-                  <span class="sign-up-page-text78"><span>01/01/23</span></span>
-                </div>
-                <div class="sign-up-page-frame58">
-                  <span class="sign-up-page-text80"><span>03/23/23</span></span>
-                </div>
-              </div>
-            </div>
-            <div class="sign-up-page-container4">
-              <div
-                data-thq="thq-dropdown"
-                class="sign-up-page-thq-dropdown list-item"
-              >
-                <div
-                  data-thq="thq-dropdown-toggle"
-                  class="sign-up-page-dropdown-toggle"
-                >
-                  <span class="sign-up-page-text82">Choose Level</span>
-                  <div
-                    data-thq="thq-dropdown-arrow"
-                    class="sign-up-page-dropdown-arrow"
-                  >
+              
+              <div class="dropdown">
+                <div class="select">
+                  <input type="button" class="selected" id="data">Choose Level</span>
+                  <div class="arrow">
                     <svg viewBox="0 0 1024 1024" class="sign-up-page-icon">
-                      <path d="M426 726v-428l214 214z"></path>
+                      <path d="M426 726v-428l214 214z"></path> 
                     </svg>
                   </div>
                 </div>
-                <ul
-                  data-thq="thq-dropdown-list"
-                  class="sign-up-page-dropdown-list"
-                >
-                  <li
-                    data-thq="thq-dropdown"
-                    class="sign-up-page-dropdown list-item"
-                  >
-                    <div
-                      data-thq="thq-dropdown-toggle"
-                      class="sign-up-page-dropdown-toggle01"
-                    >
-                      <span class="sign-up-page-text83">1</span>
-                    </div>
+                <ul class="menu">
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="1" onclick="showDropdownLevel('1')"></input>
                   </li>
-                  <li
-                    data-thq="thq-dropdown"
-                    class="sign-up-page-dropdown01 list-item"
-                  >
-                    <div
-                      data-thq="thq-dropdown-toggle"
-                      class="sign-up-page-dropdown-toggle02"
-                    >
-                      <span class="sign-up-page-text84">2</span>
-                    </div>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="2" onclick="showDropdownLevel('2')"></input>
                   </li>
-                  <li
-                    data-thq="thq-dropdown"
-                    class="sign-up-page-dropdown02 list-item"
-                  >
-                    <div
-                      data-thq="thq-dropdown-toggle"
-                      class="sign-up-page-dropdown-toggle03"
-                    >
-                      <span class="sign-up-page-text85">3</span>
-                    </div>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="3" onclick="showDropdownLevel('3')"></input>
                   </li>
-                  <li
-                    data-thq="thq-dropdown"
-                    class="sign-up-page-dropdown03 list-item"
-                  >
-                    <div
-                      data-thq="thq-dropdown-toggle"
-                      class="sign-up-page-dropdown-toggle04"
-                    >
-                      <span class="sign-up-page-text86">4</span>
-                    </div>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="4" onclick="showDropdownLevel('4')"></input>
                   </li>
-                  <li
-                    data-thq="thq-dropdown"
-                    class="sign-up-page-dropdown04 list-item"
-                  >
-                    <div
-                      data-thq="thq-dropdown-toggle"
-                      class="sign-up-page-dropdown-toggle05"
-                    >
-                      <span class="sign-up-page-text87">5</span>
-                    </div>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="5" onclick="showDropdownLevel('5')"></input>
                   </li>
-                  <li
-                    data-thq="thq-dropdown"
-                    class="sign-up-page-dropdown05 list-item"
-                  >
-                    <div
-                      data-thq="thq-dropdown-toggle"
-                      class="sign-up-page-dropdown-toggle06"
-                    >
-                      <span class="sign-up-page-text88">6</span>
-                    </div>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="6" onclick="showDropdownLevel('6')"></input>
                   </li>
-                  <li
-                    data-thq="thq-dropdown"
-                    class="sign-up-page-dropdown06 list-item"
-                  >
-                    <div
-                      data-thq="thq-dropdown-toggle"
-                      class="sign-up-page-dropdown-toggle07"
-                    >
-                      <span class="sign-up-page-text89">7</span>
-                    </div>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="7" onclick="showDropdownLevel('7')"></input>
                   </li>
-                  <li
-                    data-thq="thq-dropdown"
-                    class="sign-up-page-dropdown07 list-item"
-                  >
-                    <div
-                      data-thq="thq-dropdown-toggle"
-                      class="sign-up-page-dropdown-toggle08"
-                    >
-                      <span class="sign-up-page-text90">8</span>
-                    </div>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="8" onclick="showDropdownLevel('8')"></input>
                   </li>
                 </ul>
               </div>
-              <div
-                data-thq="thq-dropdown"
-                class="sign-up-page-thq-dropdown1 list-item"
-              >
-                <div
-                  data-thq="thq-dropdown-toggle"
-                  class="sign-up-page-dropdown-toggle09"
-                >
-                  <span class="sign-up-page-text91">Choose Section</span>
-                  <div
-                    data-thq="thq-dropdown-arrow"
-                    class="sign-up-page-dropdown-arrow1"
-                  >
-                    <svg viewBox="0 0 1024 1024" class="sign-up-page-icon2">
-                      <path d="M426 726v-428l214 214z"></path>
+              <div class="dropdown">
+                <div class="select">
+                  <input type="button" class="selected" id="datatwo">Choose Section</span>
+                  <div class="arrow">
+                    <svg viewBox="0 0 1024 1024" class="sign-up-page-icon">
+                      <path d="M426 726v-428l214 214z"></path> 
                     </svg>
                   </div>
                 </div>
-                <ul
-                  data-thq="thq-dropdown-list"
-                  class="sign-up-page-dropdown-list1"
-                >
-                  <li
-                    data-thq="thq-dropdown"
-                    class="sign-up-page-dropdown08 list-item"
-                  >
-                    <div
-                      data-thq="thq-dropdown-toggle"
-                      class="sign-up-page-dropdown-toggle10"
-                    >
-                      <span class="sign-up-page-text92">A</span>
-                    </div>
+                <ul class="menu">
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="A" onclick="showDropdownSection('A')"></input>
                   </li>
-                  <li
-                    data-thq="thq-dropdown"
-                    class="sign-up-page-dropdown09 list-item"
-                  >
-                    <div
-                      data-thq="thq-dropdown-toggle"
-                      class="sign-up-page-dropdown-toggle11"
-                    >
-                      <span class="sign-up-page-text93">B</span>
-                    </div>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="B" onclick="showDropdownSection('B')"></input>
                   </li>
-                  <li
-                    data-thq="thq-dropdown"
-                    class="sign-up-page-dropdown10 list-item"
-                  >
-                    <div
-                      data-thq="thq-dropdown-toggle"
-                      class="sign-up-page-dropdown-toggle12"
-                    >
-                      <span class="sign-up-page-text94">C</span>
-                    </div>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="C" onclick="showDropdownSection('C')"></input>
                   </li>
-                  <li
-                    data-thq="thq-dropdown"
-                    class="sign-up-page-dropdown11 list-item"
-                  >
-                    <div
-                      data-thq="thq-dropdown-toggle"
-                      class="sign-up-page-dropdown-toggle13"
-                    >
-                      <span class="sign-up-page-text95">D</span>
-                    </div>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="D" onclick="showDropdownSection('D')"></input>
                   </li>
                 </ul>
               </div>
-            </div>
+              <div class="table">
+                <table id="levelandsection">
+                  <tr class = "rownames">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Height</th>
+                    <th>Date Harvested</th>
+                    <th>Date Transferred</th> 
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Lettuce</td>
+                    <td>2.5</td>
+                    <td>01/01/2023</td>
+                    <td>02/05/2023</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Lettuce</td>
+                    <td>2.5</td>
+                    <td>01/01/2023</td>
+                    <td>02/05/2023</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Lettuce</td>
+                    <td>2.5</td>
+                    <td>01/01/2023</td>
+                    <td>02/05/2023</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Lettuce</td>
+                    <td>2.5</td>
+                    <td>01/01/2023</td>
+                    <td>02/05/2023</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Lettuce</td>
+                    <td>2.5</td>
+                    <td>01/01/2023</td>
+                    <td>02/05/2023</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Lettuce</td>
+                    <td>2.5</td>
+                    <td>01/01/2023</td>
+                    <td>02/05/2023</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Lettuce</td>
+                    <td>2.5</td>
+                    <td>01/01/2023</td>
+                    <td>02/05/2023</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Lettuce</td>
+                    <td>2.5</td>
+                    <td>01/01/2023</td>
+                    <td>02/05/2023</td>
+                  </tr>
+                </table>
+              </div>
+              <div class = "downloadButton">
+                <input type="button" class="download" id="download" value = "Download Table" onclick = "downloadToExcel()"></input>
+                <input type="button" class="downloadAll" id="downloadAll" value = "Download All" onclick = ""></input>
+              </div>
           </div>
         </div>
       </div>
