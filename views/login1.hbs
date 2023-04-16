@@ -1,8 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -72,7 +70,7 @@
           />
           <form action="/auth/login" method="POST">
           <input type="email" id="email" name="email" class="sign-up-page-text02" placeholder="Email e.g. (....@gmail.com)"></input>
-          <span class="sign-up-page-text06"><span>Log In Your Account</span></span>
+          <span class="sign-up-page-text06" id="loginpages"><span>Log In Your Account</span></span>
           <button type="submit" id="sign-in-button" class="login-button">Sign In</button>
           <div class="sign-up-page-container4">
             <input type = "password" id="password" name="password" class="sign-up-page-text08 textarea" placeholder="Password" id = "password">
@@ -81,11 +79,15 @@
               src="/stylesheets/sign_up/playground_assets/eyeopen_icon.svg"
               class="eyeopen_icon"
             />
-            <div id="error-feedback-message"></div>
+            <div id="error-feedback-message">
+              {{#if message }}
+                <h4 class="alert alert-danger mt-4">{{message}}</h4>
+              {{/if}}
+            </div>
           </div>
           </form>
-          <span class="signup-text">Don't have an account? <span><a href="/signup"></a>Sign Up Here</span></span>
-          <span class="forgot-password">Forgot Password?</span>
+          <span class="signup-text">Don't have an account? <span><a href="/signup">Sign Up Here</span></a></span>
+          <span class="forgot-password"><a href="/forgot">Forgot Password?</a></span>
           </div>
         </div>
       </div>

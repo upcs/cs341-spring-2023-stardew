@@ -1,3 +1,4 @@
+const mysql = require("mysql");
 const express = require('express');
 const router = express.Router();
 
@@ -8,5 +9,11 @@ const plantdb = mysql.createConnection({
     database: 'plantdb'
 })
 
-plantdb.query('SELECT * FROM ')
+plantdb.connect(function(err) {
+    if (err) throw err;
+    plantdb.query("SELECT * FROM plantdb", function (err, result, fields) {
+      if (err) throw err;
+      console.log(result);
+    });
+  });
 module.exports = router;

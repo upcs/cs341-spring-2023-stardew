@@ -34,6 +34,11 @@ router.get("/farm", (req, res) => {
   res.render("farm.hbs");
 });
 
+router.get("/export", (req, res) => {
+  res.render("export_page.hbs");
+});
+
+
 router.get('/profile', authController.isLoggedIn, (req, res) => {
     console.log(req.user);
     if( req.user ) {

@@ -21,6 +21,14 @@ const plantdb = mysql.createConnection({
     password: '',
     database: 'plantdb'
 })
+plantdb.connect(function(err) {
+    if (err) throw err;
+    plantdb.query("SELECT * FROM plantdb", function (err, result, fields) {
+      if (err) throw err;
+      console.log(result);
+    });
+  });
+
 
 const publicDirectory = path.join(__dirname, './public')
 app.use(express.static(publicDirectory));
