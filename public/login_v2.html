@@ -72,7 +72,9 @@
           <form action="/auth/login" method="POST">
           <input type="email" id="email" name="email" class="sign-up-page-text02" placeholder="Email e.g. (....@gmail.com)"></input>
           <span class="sign-up-page-text06"><span>Log In Your Account</span></span>
-          <div class="error-text">Incorrect email or password</div>
+          {{#if message }}
+            <div class="error-text">{{message}}</div>
+          {{/if}}
 
           <button type="submit" id="sign-in-button" class="login-button">Sign In</button>
           <div class="sign-up-page-container4">
