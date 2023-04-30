@@ -1,8 +1,8 @@
-//function that replaces the change password page with a confirmation message when user clicks "done" button
-function replace() { 
-
-    if(document.getElementById("done-button").click()) {
-        $("#change-pass-header").text("Your Password has been changed");
-        $("#changepass-section").hide();
-    }
+function replace() {
+    document.getElementById("done-button").addEventListener("click", function() {
+      document.getElementById("change-pass-header").textContent = "Your Password has been changed";
+      document.getElementById("changepass-section").style.display = "none";
+    });
 }
+
+module.exports = replace;

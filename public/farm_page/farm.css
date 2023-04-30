@@ -1,20 +1,47 @@
+@import url("https://use.typekit.net/nrl3hqr.css"); /*for the font*/
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'futura-pt', sans-serif;
 }
 
 nav{
     top: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 10px;
     width: 100vw;
     height: 80px;
     position: fixed;
     box-sizing: border-box;
     background-color: white;
     z-index: 20;
+}
+
+.nav-logo{
+    margin-right: 20px;
+}
+
+.nav-logo img{
+    height: 70px;
+    width: auto;
+}
+
+.nav-links{
+    display: flex;
+}
+
+.nav-links a{
+    margin-right: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links a:hover{
+    color:rgb(64, 168, 87);
 }
 
 .plant-info{
@@ -24,7 +51,6 @@ nav{
     align-items: center;
     width: 100%;
     padding: 0 4vw;
-    border: 1px solid orange;
 }
 
 .disabled {
@@ -43,6 +69,11 @@ nav{
     background-color: greenyellow;
 }
 
+body{
+    margin-top: 40px;
+}
+
+/*For desktop mode*/
 @media screen and (min-width:850px){
     body {
         display: flex;
@@ -51,7 +82,6 @@ nav{
         align-items: center;
         height: 100vh;
         background-color: rgb(96, 230, 133);
-        padding-top: 80px;
     }
     h1{
         font-size: 75px;
@@ -67,7 +97,6 @@ nav{
         flex-direction: column;
         background-color: #ffffff;
         border-radius: 15px;
-        border: 1px solid rgb(216, 103, 88);
     }
     .grid-header-section{
         display: flex;
@@ -75,16 +104,15 @@ nav{
         align-items: center;
         text-align: center;
         padding: 15px;
-        border: 1px solid green;
     }
     .grid-header-section i{
         padding: 15px;
-        border: 1px solid green;
     }
 
     #info{
         display:flex;
         flex-direction: column;
+        margin-top: 20px;
     }
     
     #farm-selection-div{
@@ -104,7 +132,6 @@ nav{
         position: relative;
         padding: 10px 0;
         background-color: white;
-        border: 1px solid rgb(64, 168, 87);
     }
     #farm-selection-div ul li a{
         padding: 5px;
@@ -114,6 +141,8 @@ nav{
     }
     
     #farm-button{
+        background-color: #9dd29e;
+        border-radius: 10px;
         position: relative;
     }
     
@@ -121,7 +150,6 @@ nav{
         display: flex;
         flex-direction: row;
         overflow: auto;
-        border: 1px solid purple;
         height: 70vh;
     }
 
@@ -132,7 +160,6 @@ nav{
         grid-gap: 0;
         width: 20vw;
         height: 100vh;
-        border: 1px solid red;
     }
     .popup{
         display:none;
@@ -143,8 +170,7 @@ nav{
         justify-content: center;
         background-color: #ffffff;
         border-radius: 15px;
-        border: 1px solid rgb(216, 103, 88);
-        background-color: blue;
+        background-color: white;
         z-index: 10;
     }
     .pod-section{
@@ -154,7 +180,6 @@ nav{
         grid-gap: 0;
         width: 95%;
         height: 45%;
-        border: 1px solid red;
     }
     .pod-section .pod-item{
         display: flex;
@@ -167,12 +192,12 @@ nav{
         margin: 0;
         padding: 0;
         border: 2px solid black;
-        background-color: rgb(175, 88, 88);
+        background-color: #ffffff;
         text-align: center;
         cursor: pointer;
     }
     .grid-item:hover, .pod-item:hover{
-        background-color: rgb(216, 255, 222);
+        background-color: #42a957;
     }
       
     .clicked {
@@ -187,14 +212,15 @@ nav{
     
     #information-section {
         width: 30vw;
-        height: 65vh;
+        height: 85vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         background-color: #ffffff;
+        padding-top: 10px;
+        padding-bottom: 20px;
         border-radius: 15px;
-        border: 1px solid rgb(126, 88, 216);
+        overflow: scroll;
     }
     
     #edit-button, #save-button{
@@ -220,6 +246,8 @@ nav{
     }
     
 }
+
+/*Tablet and mobile mode*/
 @media screen and (max-width:849px){
     body {
         display: flex;
@@ -244,7 +272,6 @@ nav{
         flex-direction: column;
         background-color: #ffffff;
         border-radius: 15px;
-        border: 1px solid rgb(126, 88, 216);
     }
     .grid-header-section{
         display: flex;
@@ -252,9 +279,8 @@ nav{
         align-items: center;
         text-align: center;
         padding: 15px;
-        border: 1px solid green;
     }
-    .grid-header-section i{
+    .grid-header-section i{ /*farm list icon*/
         padding: 15px;
         border: 1px solid green;
     }
@@ -278,7 +304,6 @@ nav{
         position: relative;
         padding: 10px 0;
         background-color: white;
-        border: 1px solid rgb(64, 168, 87);
     }
     #farm-selection-div ul li a{
         padding: 5px;
@@ -295,6 +320,8 @@ nav{
     }
     
     #farm-button{
+        background-color: #9dd29e;
+        border-radius: 10px;
         position: relative;
     }
     
@@ -302,7 +329,6 @@ nav{
         display: flex;
         flex-direction: row;
         overflow: auto;
-        border: 1px solid purple;
     }
 
     .grid-section-one, .grid-section-two, .grid-section-three, .grid-section-four{
@@ -312,7 +338,7 @@ nav{
         grid-gap: 0;
         width: 100vw;
         height: 100vh;
-        border: 1px solid red;
+        border: 1px solid green;
         position: relative;
         z-index: 1;
     }
@@ -325,8 +351,7 @@ nav{
         justify-content: center;
         background-color: #ffffff;
         border-radius: 15px;
-        border: 1px solid rgb(216, 103, 88);
-        background-color: blue;
+        background-color: white;
         z-index: 10;
     }
     .pod-section{
@@ -336,7 +361,6 @@ nav{
         grid-gap: 0;
         width: 95%;
         height: 45%;
-        border: 1px solid red;
     }
     .pod-section .pod-item{
         display: flex;
@@ -349,7 +373,7 @@ nav{
         margin: 0;
         padding: 0;
         border: 2px solid black;
-        background-color: rgb(175, 88, 88);
+        background-color: rgb(255, 255, 255);
         text-align: center;
         cursor: pointer;
     }
@@ -358,7 +382,6 @@ nav{
     }
     
     .grid-item {
-        background-color: rgb(175, 88, 88);
         text-align: center;
         cursor: pointer;
     }
@@ -381,9 +404,10 @@ nav{
         justify-content: center;
         align-items: center;
         background-color: #ffffff;
+        padding-top: 50px;
         padding-bottom: 100px;
         border-radius: 15px;
-        border: 1px solid rgb(126, 88, 216);
+        overflow: auto;
     }
     
     #edit-button, #save-button{
@@ -408,19 +432,5 @@ nav{
         font-size: 15px;
         color: red;
     }
-
-
-    #water-section {
-        width: 95vw;
-        height: 85vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #ffffff;
-        padding: 40px;
-        border-radius: 15px;
-        border: 1px solid rgb(126, 88, 216);
-    }
     
 }
-

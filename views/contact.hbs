@@ -41,25 +41,36 @@
   <section>
     <div class="support">
       <div class="support-head">
-        <b>Contact Us</b><br><br>We encourage all inquiries and feedback. We are constantly looking to bring in community voices to influence our research and development. Let us know if there is anything you wish you had to help solve food shortages.
-        <br><br>Fill out the form, and we will get back to as soon as we can! Or email us at info@backusagrilabs.com.
+        <b>Contact Us</b>
+      </div>
+      <div class ="contact-message">
+        We encourage all inquiries and feedback. We are constantly looking to bring in community voices to influence our research and development. Let us know if there is anything you wish you had to help solve food shortages.
+      <div>
+    </div>
+  </section>
+  <section>
+    <div class="support-body">
+      <div class="contact-instruction">
+        Fill out the form, and we will get back to you as soon as we can! Or email us at info@backusagrilabs.com.
       </div>
       <div class="form-container">
-        <form> <!-- action="/auth/login" method="POST" -->
-          <label for="fname">First Name</label>
-          <input type="text" class="form-control" id="fname" name="firstname" placeholder="First Name">
-          <label for="lname">Last Name</label>
-          <input type="text" class="form-control" id="lname" name="lastname" placeholder="Last Name">
+        <form action="https://formsubmit.co/86754b8c79a9ba4f618c1f6bf7c8442d" method="POST"> <!-- action="/auth/login" method="POST" -->
+          <input type="hidden" name=" _subject" value="Backus Agrilabs Support">
+          <label for="fname">Name</label>
+          <input type="text" class="form-control" required id="fname" name="firstname" placeholder="First Name">
           <label for="email">Email</label>
-          <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+          <input type="text" class="form-control" required id="email" name="email" placeholder="Email">
 
           <label for="feedback">Message</label><br>
           <textarea type="text" class="feedback" id="feedback" name="feedback"></textarea>
 
-          <div id="error-feedback-message"></div>
-
           <button type="submit" id="send-feedback">Send</button>
-      </form>
+
+
+
+          {{!-- <label for="lname">Last Name</label>
+          <input type="text" class="form-control" id="lname" name="lastname" placeholder="Last Name"> --}}
+        </form>
       </div>
     </div>
   </section>
