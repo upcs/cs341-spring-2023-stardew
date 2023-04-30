@@ -121,14 +121,53 @@
                   </li>
                 </ul>
               </div>
-              <div class="table">
+              <div class="dropdown">
+                <div class="select-plant" id="select-plant">
+                  <input type="button" class="selected" id="datathree">Choose Plant</span>
+                  <div class="arrow">
+                    <svg viewBox="0 0 1024 1024" class="sign-up-page-icon">
+                      <path d="M426 726v-428l214 214z"></path> 
+                    </svg>
+                  </div>
+                </div>
+                <ul class="menu">
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="1" onclick="showPlantSection('1')"></input>
+                  </li>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="2" onclick="showPlantSection('2')"></input>
+                  </li>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="3" onclick="showPlantSection('3')"></input>
+                  </li>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="4" onclick="showPlantSection('4')"></input>
+                  </li>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="5" onclick="showPlantSection('5')"></input>
+                  </li>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="6" onclick="showPlantSection('6')"></input>
+                  </li>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="7" onclick="showPlantSection('7')"></input>
+                  </li>
+                  <li>
+                    <input type ="button" class="menu-dropdown" value="8" onclick="showPlantSection('8')"></input>
+                  </li>
+                </ul>
+              </div>
+
+
+              <div class="table" id="tabletable">
                 <table id="levelandsection">
                   <tr class = "rownames">
                     <th>ID</th>
                     <th>Name</th>
                     <th>Height</th>
                     <th>Date Harvested</th>
-                    <th>Date Transferred</th> 
+                    <th>Date Transferred</th>
+                    <th>Download Row</th>  
                   </tr>
                   <tr>
                     <td>1</td>
@@ -136,6 +175,7 @@
                     <td>2.5</td>
                     <td>01/01/2023</td>
                     <td>02/05/2023</td>
+                    <td><input type ="button" class = "download-row" id = "1"></button></td>
                   </tr>
                   <tr>
                     <td>2</td>
@@ -143,6 +183,7 @@
                     <td>2.5</td>
                     <td>01/01/2023</td>
                     <td>02/05/2023</td>
+                    <td><input type ="button" class = "download-row" id = "2"></button></td>
                   </tr>
                   <tr>
                     <td>3</td>
@@ -150,6 +191,7 @@
                     <td>2.5</td>
                     <td>01/01/2023</td>
                     <td>02/05/2023</td>
+                    <td><input type ="button" class = "download-row" id = "3"></button></td>
                   </tr>
                   <tr>
                     <td>4</td>
@@ -157,6 +199,7 @@
                     <td>2.5</td>
                     <td>01/01/2023</td>
                     <td>02/05/2023</td>
+                    <td><input type ="button" class = "download-row" id = "4"></button></td>
                   </tr>
                   <tr>
                     <td>5</td>
@@ -164,6 +207,7 @@
                     <td>2.5</td>
                     <td>01/01/2023</td>
                     <td>02/05/2023</td>
+                    <td><input type ="button" class = "download-row" id = "5"></button></td>
                   </tr>
                   <tr>
                     <td>6</td>
@@ -171,6 +215,7 @@
                     <td>2.5</td>
                     <td>01/01/2023</td>
                     <td>02/05/2023</td>
+                    <td><input type ="button" class = "download-row" id = "6"></button></td>
                   </tr>
                   <tr>
                     <td>7</td>
@@ -178,6 +223,7 @@
                     <td>2.5</td>
                     <td>01/01/2023</td>
                     <td>02/05/2023</td>
+                    <td><input type ="button" class = "download-row" id = "7"></button></td>
                   </tr>
                   <tr>
                     <td>8</td>
@@ -185,6 +231,7 @@
                     <td>2.5</td>
                     <td>01/01/2023</td>
                     <td>02/05/2023</td>
+                    <td><input type ="button" class = "download-row" id = "8"></button></td>
                   </tr>
                 </table>
               </div>

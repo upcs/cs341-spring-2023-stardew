@@ -17,6 +17,13 @@
   position: absolute;
 }
 
+.error-text {
+  top: 440px;
+  left: 230px;
+  color: red;
+  position: absolute;
+}
+
 .signup-text {
   top: 560px;
   left: 400px;

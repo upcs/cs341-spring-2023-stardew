@@ -96,7 +96,7 @@
 .table {
   display: inline-block;
   position: absolute;
-  top: 200px;
+  top: 100px;
   font-size: 30px;
   
   
@@ -139,6 +139,7 @@ table, tr, td, th {
   border: 2px inset black;
   border-collapse: collapse;
   border-spacing: 0;
+  
 }
 
 tr {
@@ -156,6 +157,20 @@ tr {
   padding-right: var(--dl-space-space-unit);
   padding-bottom: var(--dl-space-space-halfunit);
 }
+
+.select-plant {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius2);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+}
+
 .selected {
   font-size: 14px;
   font-style: normal;
@@ -211,11 +226,29 @@ tr {
   padding-right: var(--dl-space-space-unit);
   padding-bottom: var(--dl-space-space-halfunit);
 }
-.menu-dropdown:hover {
+
+
+.download-row {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: none;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+}
+
+.menu-dropdown:hover, .download-row:hover{
   fill: #fff;
   color: #fff;
   background-color: #595959;
 }
+
+
 li {
   width: 100%;
   cursor: pointer;
