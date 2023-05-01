@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="english">
   <head>
@@ -72,11 +73,11 @@
           <form action="/auth/login" method="POST">
           <input type="email" id="email" name="email" class="sign-up-page-text02" placeholder="Email e.g. (....@gmail.com)"></input>
 
+
           <span class="sign-up-page-text06"><span>Log In Your Account</span></span>
           {{#if message }}
             <div class="error-text">{{message}}</div>
           {{/if}}
-
 
           <button type="submit" id="sign-in-button" class="login-button">Sign In</button>
           <div class="sign-up-page-container4">
@@ -90,7 +91,9 @@
           </div>
           </form>
           <span class="signup-text">Don't have an account? <span><a href="/signup"></a>Sign Up Here</span></span>
-          <span class="forgot-password">Forgot Password?</span>
+
+          <span class="forgot-password"><a href="/forgot">Forgot Password?</a></span>
+
           </div>
         </div>
       </div>
