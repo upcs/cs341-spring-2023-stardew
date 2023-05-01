@@ -1,3 +1,8 @@
+@import url("https://use.typekit.net/nrl3hqr.css"); /*for the font*/
+
+*{
+    font-family: 'futura-pt', sans-serif;
+}
 
 .submit-button {
   top: 350px;
