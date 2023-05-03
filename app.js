@@ -4,7 +4,7 @@ const mysql = require("mysql");
 const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 
-dotenv.config({ path: './.env'});
+dotenv.config({ path: './.env'});// To store some sensitive data that relates to cookie password
 
 const app = express();
 
@@ -21,13 +21,6 @@ const plantdb = mysql.createConnection({
     password: '',
     database: 'plantdb'
 })
-plantdb.connect(function(err) {
-    if (err) throw err;
-    plantdb.query("SELECT * FROM plantdb", function (err, result, fields) {
-      if (err) throw err;
-      console.log(result);
-    });
-  });
 
 
 const publicDirectory = path.join(__dirname, './public')
@@ -39,6 +32,8 @@ app.use(cookieParser());
 
 app.set('view engine', 'hbs');
 
+
+//checks to see if the mysql's is fully connected or not
 db.connect( (error) =>{
     if(error) {
         console.log(error)
@@ -61,6 +56,6 @@ app.use('/',require('./routes/pages'));
 
 app.use('/auth', require('./routes/auth'));
 
-app.listen(3000, () => {
+app.listen(3000, () => {//starts website on port 3000
     console.log("Server started on Port 3000");
 })
